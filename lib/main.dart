@@ -1,5 +1,7 @@
 import 'package:citym/providers/auth_provider.dart';
+import 'package:citym/providers/bus_booking_provider.dart';
 import 'package:citym/providers/bus_schedules_provider.dart';
+import 'package:citym/providers/user_profile_provider.dart';
 import 'package:citym/screens/auth/auth_wrapper.dart';
 import 'package:citym/screens/bus_result/bus_result_screen.dart';
 import 'package:citym/theme/bus_booking_theme.dart';
@@ -12,6 +14,8 @@ void main() {
       create: (_) => AuthProvider(),
     ),
     ChangeNotifierProvider(create: (_) => BusSchedulesProvider()),
+    ChangeNotifierProvider(create: (_) => BusBookingProvider()),
+    ChangeNotifierProvider(create: (_) => UserProfileProvider()),
   ], child: const MyApp(),));
 }
 

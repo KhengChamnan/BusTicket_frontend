@@ -1,4 +1,3 @@
-import 'package:citym/models/users.dart';
 
 class AuthDto {
   /// Convert login request to JSON
@@ -19,12 +18,5 @@ class AuthDto {
     };
   }
 
-  static Users userInfo(Map<String, dynamic> json) {
-    return Users(
-      id: json['id'].toString(),
-      email: json['email_address'],
-      fullname: json['full_name'] ?? '',
-    );
-  }
 
 }

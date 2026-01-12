@@ -53,7 +53,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
                 
                 // Recently searched section
-                const UpcomingJourneySection(),
+                const SearchRecentlySearchedSection(),
               ],
             ),
           ),

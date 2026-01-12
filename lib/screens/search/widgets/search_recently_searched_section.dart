@@ -7,8 +7,8 @@ import 'package:citym/models/bus_schedules.dart';
 
 /// Section displaying upcoming journeys.
 /// Shows a list of upcoming bus schedules.
-class UpcomingJourneySection extends StatelessWidget {
-  const UpcomingJourneySection({super.key});
+class SearchRecentlySearchedSection extends StatelessWidget {
+  const SearchRecentlySearchedSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class UpcomingJourneySection extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(22, 32, 22, 16),
           child: Text(
-            'Upcoming Journey',
+            'Recently Searched',
             style: const TextStyle(
               fontFamily: 'Rubik',
               fontSize: 24,
@@ -41,7 +41,7 @@ class UpcomingJourneySection extends StatelessWidget {
                 padding: const EdgeInsets.all(22),
                 child: Center(
                   child: Text(
-                    'No upcoming journeys',
+                    'No recently searched routes',
                     style: TextStyle(
                       fontFamily: 'Rubik',
                       fontSize: 16,

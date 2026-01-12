@@ -82,9 +82,8 @@ class _BusLoadingAnimationState extends State<BusLoadingAnimation>
             child: _buildBus(),
           ),
         ),
-        const SizedBox(height: 24),
         const Text(
-          'Searching for buses...',
+          'Loading...',
           style: TextStyle(
             fontSize: 16,
             color: Colors.grey,

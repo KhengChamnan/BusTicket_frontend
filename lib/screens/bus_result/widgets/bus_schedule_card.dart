@@ -1,5 +1,6 @@
 
 import 'package:citym/models/bus_schedules.dart';
+import 'package:citym/screens/booking/booking_form_screen.dart';
 import 'package:citym/theme/bus_booking_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,22 +15,33 @@ class BusScheduleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: BusbookingSpacings.xs + 2,
-        vertical: BusbookingSpacings.xs,
-      ),
-      decoration: BoxDecoration(
-        color: BusbookingColors.white,
-        border: Border.all(color: BusbookingColors.borderLight),
-        borderRadius: BorderRadius.circular(BusbookingSpacings.radius),
-      ),
-      padding: const EdgeInsets.all(BusbookingSpacings.xs),
-      child: Column(
-        children: [
-          _buildRouteSection(),
-          _buildDetailsSection(),
-        ],
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => BookingFormScreen(schedule: schedule),
+          ),
+        );
+      },
+      borderRadius: BorderRadius.circular(BusbookingSpacings.radius),
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          horizontal: BusbookingSpacings.xs + 2,
+          vertical: BusbookingSpacings.xs,
+        ),
+        decoration: BoxDecoration(
+          color: BusbookingColors.white,
+          border: Border.all(color: BusbookingColors.borderLight),
+          borderRadius: BorderRadius.circular(BusbookingSpacings.radius),
+        ),
+        padding: const EdgeInsets.all(BusbookingSpacings.xs),
+        child: Column(
+          children: [
+            _buildRouteSection(),
+            _buildDetailsSection(),
+          ],
+        ),
       ),
     );
   }
